@@ -1,0 +1,42 @@
+# Version control
+.git/
+.gitignore
+
+# Go artifacts
+vendor/
+**/*.test
+**/*.out
+*.coverprofile
+coverage.*
+profile.cov
+
+# IDEs and Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+.agents/
+
+# OS specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Environment and Config files
+.env
+.env.*
+!.env.example
+docker-compose.yml
+
+# Documentation & Meta
+README.md
+Dockerfile
+.dockerignore
+
+# Built binaries (don't copy local binaries to the image)
+/gateway
+/webhook-gateway

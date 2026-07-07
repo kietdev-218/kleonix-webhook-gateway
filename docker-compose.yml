@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  gateway:
+    build: .
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    environment:
+      - HTTP_PORT=3000
+      - LOG_LEVEL=debug
+      - RABBITMQ_EXCHANGE=ory_events
+      - RABBITMQ_ROUTING_KEY=webhook.kratos
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
